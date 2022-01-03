@@ -5,21 +5,21 @@
 class Mani < Formula
   desc "CLI tool to help you manage multiple repositories"
   homepage "https://manicli.com"
-  version "0.11.0"
+  version "0.11.1"
   license "MIT"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/alajmo/mani/releases/download/v0.11.0/mani_0.11.0_darwin_amd64.tar.gz"
-      sha256 "a5ad980d9c9423fd947f30fe5c2b8bc21d7a9ef3be21daa4b6ebdf2d104d757a"
+    if Hardware::CPU.arm?
+      url "https://github.com/alajmo/mani/releases/download/v0.11.1/mani_0.11.1_darwin_arm64.tar.gz"
+      sha256 "3cbd23e98efc99e487c5c8cc80b1448094042326c86d964f508e49d9c5a5678e"
 
       def install
         bin.install "mani"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/alajmo/mani/releases/download/v0.11.0/mani_0.11.0_darwin_arm64.tar.gz"
-      sha256 "f0dffc1d905cbae57636ca8f326a7030682f0e487cd292d22135658830c72dd4"
+    if Hardware::CPU.intel?
+      url "https://github.com/alajmo/mani/releases/download/v0.11.1/mani_0.11.1_darwin_amd64.tar.gz"
+      sha256 "f34960cfdead951150b58e7ec8aa9400c0c91b6e9fa8c872117b838f17715f8b"
 
       def install
         bin.install "mani"
@@ -28,17 +28,17 @@ class Mani < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/alajmo/mani/releases/download/v0.11.0/mani_0.11.0_linux_amd64.tar.gz"
-      sha256 "9e3259f7210cceb75db3622bc79eac093d2c4be160bd93b4b663f3e39e5199d4"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/alajmo/mani/releases/download/v0.11.1/mani_0.11.1_linux_arm64.tar.gz"
+      sha256 "0f2d5b35c8b1770310932b42a6aa6e1a6da5eaf20199be3431cab9796325fdc4"
 
       def install
         bin.install "mani"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/alajmo/mani/releases/download/v0.11.0/mani_0.11.0_linux_arm64.tar.gz"
-      sha256 "bfa0d5d47f2d5e119c2f859e58ec34b5fbf4727f994f52f5305aa14061b5794a"
+    if Hardware::CPU.intel?
+      url "https://github.com/alajmo/mani/releases/download/v0.11.1/mani_0.11.1_linux_amd64.tar.gz"
+      sha256 "49526c801bcd150558774591421d4fe1d765b011375a2508c45e055a0da0561b"
 
       def install
         bin.install "mani"
