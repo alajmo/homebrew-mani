@@ -5,21 +5,21 @@
 class Mani < Formula
   desc "CLI tool to help you manage multiple repositories"
   homepage "https://manicli.com"
-  version "0.12.0"
+  version "0.12.1"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/alajmo/mani/releases/download/v0.12.0/mani_0.12.0_darwin_amd64.tar.gz"
-      sha256 "bac00ec7e5b2a79e10f7583f03dc6ac373d2373289b1e7a3f8f2214970b22673"
+      url "https://github.com/alajmo/mani/releases/download/v0.12.1/mani_0.12.1_darwin_amd64.tar.gz"
+      sha256 "20fc658fe71a2ec7fd557bea64dfea31a18414120d848061c848e2f63b2237cc"
 
       def install
         bin.install "mani"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/alajmo/mani/releases/download/v0.12.0/mani_0.12.0_darwin_arm64.tar.gz"
-      sha256 "058a5d7f97ebbefc2a4152abdd58f38408bccadf9a0c89a2bf7fcdbffd9fa87a"
+      url "https://github.com/alajmo/mani/releases/download/v0.12.1/mani_0.12.1_darwin_arm64.tar.gz"
+      sha256 "22e04eed51d440332b3b29ecea7584893979e0dd424a1161f24cd8fd73aa1e52"
 
       def install
         bin.install "mani"
@@ -29,16 +29,16 @@ class Mani < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/alajmo/mani/releases/download/v0.12.0/mani_0.12.0_linux_arm64.tar.gz"
-      sha256 "fcd0991d1f65c89a83ec10aa6dc82b42d29b8422f24e1816119105980b0d5d2d"
+      url "https://github.com/alajmo/mani/releases/download/v0.12.1/mani_0.12.1_linux_arm64.tar.gz"
+      sha256 "e7b88befdfbbee489617ad2c0fd7dcc9fe32314fac9c7301983a9da3c0752552"
 
       def install
         bin.install "mani"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/alajmo/mani/releases/download/v0.12.0/mani_0.12.0_linux_amd64.tar.gz"
-      sha256 "5389fcfeb8a7205b875aaab45e5bf6d5a80f9fa30c4f753a2500229a86b98a6a"
+      url "https://github.com/alajmo/mani/releases/download/v0.12.1/mani_0.12.1_linux_amd64.tar.gz"
+      sha256 "84d77396f2515b5b53403fa775bd48b06099d0f6ee51435a7308cd43fa5d8d4b"
 
       def install
         bin.install "mani"
