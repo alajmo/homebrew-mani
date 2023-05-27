@@ -5,21 +5,21 @@
 class Mani < Formula
   desc "CLI tool to help you manage multiple repositories"
   homepage "https://manicli.com"
-  version "0.23.0"
+  version "0.24.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/alajmo/mani/releases/download/v0.23.0/mani_0.23.0_darwin_amd64.tar.gz"
-      sha256 "9f4da96740e62fdf84b9523007d580bd9c0f836fc950c4683f5fccaf40ac747f"
+      url "https://github.com/alajmo/mani/releases/download/v0.24.0/mani_0.24.0_darwin_amd64.tar.gz"
+      sha256 "dd6fd0146a7a72b83ec923234e40490995c3c8a02afe6e390b02d7f7ac772cdd"
 
       def install
         bin.install "mani"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/alajmo/mani/releases/download/v0.23.0/mani_0.23.0_darwin_arm64.tar.gz"
-      sha256 "36fed33d769d60c434659fb6601ada024a494aa0b308f571d3e5a7bacd421d1a"
+      url "https://github.com/alajmo/mani/releases/download/v0.24.0/mani_0.24.0_darwin_arm64.tar.gz"
+      sha256 "c7674b7650afca03aaeda662cc411b4ee14fc69534b78a9e2a353d0466873b32"
 
       def install
         bin.install "mani"
@@ -28,17 +28,17 @@ class Mani < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/alajmo/mani/releases/download/v0.23.0/mani_0.23.0_linux_arm64.tar.gz"
-      sha256 "0123154bd0c4b5f18943a546bca3ebcf97e0bc8b262fd0008c211cbd8b0e7a5c"
+    if Hardware::CPU.intel?
+      url "https://github.com/alajmo/mani/releases/download/v0.24.0/mani_0.24.0_linux_amd64.tar.gz"
+      sha256 "0ad69b93cd905296280ce7896fabba43b25cebe2339dabe0831812737a32c5ba"
 
       def install
         bin.install "mani"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/alajmo/mani/releases/download/v0.23.0/mani_0.23.0_linux_amd64.tar.gz"
-      sha256 "6a4ef36fc320d7fd38ca0a4124f6ef6521895ef890ade64987d1d6575afd4a6c"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/alajmo/mani/releases/download/v0.24.0/mani_0.24.0_linux_arm64.tar.gz"
+      sha256 "421bb5c4001201286f988f5af76b48ff13274420a05a01ef76a434ddb1c6845c"
 
       def install
         bin.install "mani"
