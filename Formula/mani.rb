@@ -5,21 +5,21 @@
 class Mani < Formula
   desc "CLI tool to help you manage multiple repositories"
   homepage "https://manicli.com"
-  version "0.24.0"
+  version "0.25.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/alajmo/mani/releases/download/v0.24.0/mani_0.24.0_darwin_amd64.tar.gz"
-      sha256 "dd6fd0146a7a72b83ec923234e40490995c3c8a02afe6e390b02d7f7ac772cdd"
+      url "https://github.com/alajmo/mani/releases/download/v0.25.0/mani_0.25.0_darwin_amd64.tar.gz"
+      sha256 "a9f4e6cc669a1649d9153914a00555d8fcd92effd44d8499a65a09fac94e9058"
 
       def install
         bin.install "mani"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/alajmo/mani/releases/download/v0.24.0/mani_0.24.0_darwin_arm64.tar.gz"
-      sha256 "c7674b7650afca03aaeda662cc411b4ee14fc69534b78a9e2a353d0466873b32"
+      url "https://github.com/alajmo/mani/releases/download/v0.25.0/mani_0.25.0_darwin_arm64.tar.gz"
+      sha256 "27b2b4852b1ea01b902c6699ed8665349259ecfbe502d065f3a02482b40ea970"
 
       def install
         bin.install "mani"
@@ -29,16 +29,16 @@ class Mani < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/alajmo/mani/releases/download/v0.24.0/mani_0.24.0_linux_amd64.tar.gz"
-      sha256 "0ad69b93cd905296280ce7896fabba43b25cebe2339dabe0831812737a32c5ba"
+      url "https://github.com/alajmo/mani/releases/download/v0.25.0/mani_0.25.0_linux_amd64.tar.gz"
+      sha256 "39891e9117a13e6b4fbca3b807624d8580bf6db78401bcb8db6e3fd6d472494c"
 
       def install
         bin.install "mani"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/alajmo/mani/releases/download/v0.24.0/mani_0.24.0_linux_arm64.tar.gz"
-      sha256 "421bb5c4001201286f988f5af76b48ff13274420a05a01ef76a434ddb1c6845c"
+      url "https://github.com/alajmo/mani/releases/download/v0.25.0/mani_0.25.0_linux_arm64.tar.gz"
+      sha256 "9dc0c58355fa7d8e0483059f27464ca570cfbb4730833be6648f1120ddb7b04e"
 
       def install
         bin.install "mani"
