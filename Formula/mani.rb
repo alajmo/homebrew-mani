@@ -9,17 +9,17 @@ class Mani < Formula
   license "MIT"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/alajmo/mani/releases/download/v0.25.0/mani_0.25.0_darwin_amd64.tar.gz"
-      sha256 "a9f4e6cc669a1649d9153914a00555d8fcd92effd44d8499a65a09fac94e9058"
+    if Hardware::CPU.arm?
+      url "https://github.com/alajmo/mani/releases/download/v0.25.0/mani_0.25.0_darwin_arm64.tar.gz"
+      sha256 "7aeab59b3dc519f761dd9e0604e39b856ac78bb0e0f01f9651cbcaf61a80e5d6"
 
       def install
         bin.install "mani"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/alajmo/mani/releases/download/v0.25.0/mani_0.25.0_darwin_arm64.tar.gz"
-      sha256 "27b2b4852b1ea01b902c6699ed8665349259ecfbe502d065f3a02482b40ea970"
+    if Hardware::CPU.intel?
+      url "https://github.com/alajmo/mani/releases/download/v0.25.0/mani_0.25.0_darwin_amd64.tar.gz"
+      sha256 "ec0ccf7e9888fa93e9392a06e921817c7c720ec81a6fafb040234c1f24456c2d"
 
       def install
         bin.install "mani"
@@ -30,7 +30,7 @@ class Mani < Formula
   on_linux do
     if Hardware::CPU.intel?
       url "https://github.com/alajmo/mani/releases/download/v0.25.0/mani_0.25.0_linux_amd64.tar.gz"
-      sha256 "39891e9117a13e6b4fbca3b807624d8580bf6db78401bcb8db6e3fd6d472494c"
+      sha256 "3170654ace305b47a288d851f836b2d68536511317643a2ee056ddea432ded2e"
 
       def install
         bin.install "mani"
@@ -38,7 +38,7 @@ class Mani < Formula
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/alajmo/mani/releases/download/v0.25.0/mani_0.25.0_linux_arm64.tar.gz"
-      sha256 "9dc0c58355fa7d8e0483059f27464ca570cfbb4730833be6648f1120ddb7b04e"
+      sha256 "fcc1d489ddff5e0a8d97e9e14bf183f7348fec426f4bbf520f0559ec6066d5a8"
 
       def install
         bin.install "mani"
